@@ -53,16 +53,15 @@ form{
 }
 
 .container {
-    width: 25%;
+    width: 80%;
     border-color: blue;
     text-align: center;
-	margin: 0 auto;
+	margin: 3em auto;
 }
 
 .container > div > img{
 	width: 100%;
 	height: 100%;
-	display: inline-block;
 }
 
 
@@ -88,4 +87,49 @@ form{
    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+.form-container{
+	width: 90%;
+	margin: 0 auto;
+}
 
+.form-container > form > input{
+	width: 100%;
+	height: 2.3em;
+	border-radius: 5px;
+	margin-bottom: .5em;
+}
+
+#acessar{
+	margin: .5em auto;
+	width: 101.6%;
+	height: 3em;
+}
+
+.container > ul{
+	list-style: none;
+}
+
+ul.logo-banner > li{
+	float: left;
+}
+
+.mini-logo{
+	width: 35%;
+}
+
+#logo-sead{
+	margin-top: .5em;
+}
+
+.logo-estado{
+	width: 30%;
+	margin: 1em auto;
+}
+
+.left{
+	float: left;
+}
+
+.right{
+	float: right;
+}
