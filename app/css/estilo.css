@@ -1,13 +1,48 @@
 img{
 	max-width: 100%;
 	max-height: 100%;
-	
 }
 
 a{
 	text-decoration: none;
-	color: #000 !important;
+	
 }
+
+body{
+	background-image: radial-gradient(center center, ellipse cover, #1E90FF,  #04376F);
+    background-image: -o-radial-gradient(center center, ellipse cover,  #1E90FF,  #04376F);
+    background-image: -ms-radial-gradient(center center, ellipse cover,  #1E90FF,  #04376F);
+    background-image: -moz-radial-gradient(center center, ellipse cover,  #1E90FF,   #04376F  );
+    background-image: -webkit-radial-gradient(center center, ellipse cover,  #1E90FF,  #04376F);
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	
+
+}
+
+#img-titulo{
+	background-image: url(imagem.jpg);
+	background-size:100% 100%;
+	-webkit-background-size: 100% 100%;
+	-o-background-size: 100% 100%;
+	-khtml-background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
+	width: 60%;
+	height: 60%;
+	margin: 40px auto 20px auto;
+	
+}
+
+
+
+
+form{
+	margin: 10% 5% 0% 5% !important;
+}
+
+
+
+
+
 
 @media only screen and (orientation: portrait){
 	
@@ -16,3 +51,40 @@ a{
 @media only screen and (orientation:landscape){
   
 }
+
+.container {
+    width: 25%;
+    border-color: blue;
+    text-align: center;
+	margin: 0 auto;
+}
+
+.container > div > img{
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+}
+
+
+
+::-webkit-input-placeholder {
+   color: #001A68;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+:-moz-placeholder {
+   color: #001A68;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+::-moz-placeholder {
+   color: #001A68;  
+   font: 12px verdana, arial, sans-serif;
+}
+
+:-ms-input-placeholder {  
+   color: #001A68;  
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
