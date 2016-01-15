@@ -68,7 +68,8 @@ form{
 
 
 ::-webkit-input-placeholder {
-   color: #001A68;
+   /*color: #001A68;*/
+   color: #000;
    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
