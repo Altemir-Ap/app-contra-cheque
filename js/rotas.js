@@ -3,8 +3,8 @@ crossroads.addRoute('/', function () {
 	carregaPagina("login.html");
 });
 
-crossroads.addRoute('outra', function(){
-  carregaPagina("outra.html");
+crossroads.addRoute('servicos', function(){
+  carregaPagina("servicos.html");
 });
 
 
