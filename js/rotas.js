@@ -7,7 +7,17 @@ crossroads.addRoute('servicos', function(){
   carregaPagina("servicos.html");
 });
 
+crossroads.addRoute('ano-mes', function(){
+  carregaPagina("mes-e-ano.html");
+});
 
+crossroads.addRoute('contra-cheque', function(){
+  carregaPagina("contra-cheque.html");
+});
+
+crossroads.addRoute('seleciona-matricula', function(){
+  carregaPagina("seleciona-matricula.html");
+});
  
 //setup hasher
 function parseHash(newHash, oldHash) {

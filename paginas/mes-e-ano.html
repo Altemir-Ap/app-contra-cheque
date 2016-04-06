@@ -1,0 +1,48 @@
+<div class="principal">
+	<div class="page-header">
+	
+	</div>
+	<div>
+		<form id="form-mes-ano">
+			<div>
+				<label for="ano">Ano</label>
+				<input type="number" id="ano" name="ano">
+				<br />
+			</div>
+			<div class="area-mes">
+				<label for="mes">Mês</label>
+				<input type="number" id="mes" name="mes">
+				<br />
+			</div>
+			<div class="area-submit">
+				<input type="submit" id="consultar" name="consultar" value="CONSULTAR">
+			</div>
+		</form>
+	</div>
+</div>
+<div class="sel-ano">
+	
+</div>
+<div class="sel-mes">
+	
+</div>
+<script>
+	$(".principal").show();
+	$(".area-mes").hide();
+	$(".area-submit").hide();
+	$(".sel-ano").hide();
+	$(".sel-mes").hide();
+	listaAnos(anos);
+	$("#ano").focus(function(){
+		$(".principal").hide();
+		$(".sel-ano").show();
+	});
+	$("#mes").focus(function(){
+		$(".principal").hide();
+		$(".sel-mes").show();
+	});
+	$("#form-mes-ano").submit(function(evt){
+		evt.preventDefault();
+		consultarContraCheque(ano, mes);
+	});
+</script>
