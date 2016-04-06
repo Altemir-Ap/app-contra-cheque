@@ -113,9 +113,37 @@ function consultarContraCheque(year, month){
         if(matriculas.length > 1){
             window.location = "#seleciona-matricula";
         }else{
-            window.location = "#contra-cheque";
+            defineMatricula(matriculas[0].id, matriculas[0].matricula);
         }
     }).fail(function(erro){
         console.dir(erro);
     });
+}
+
+function defineMatricula(id, registration){
+    idMatricula = id;
+    matricula = registration;
+    console.log(idMatricula, matricula);
+    $.ajax({
+        url : "http://10.250.10.171/service/contra-cheque/"+ano+"/"+mes+"/"+idMatricula+"/"+matricula+"?api_token="+token,
+        method : "GET"
+    }).done(function(resposta){
+        contracheque = resposta;
+        console.log(contracheque);
+        window.location = "#contra-cheque";
+    }).fail(function(erro){
+        console.dir(erro);
+    });
+}
+
+function listaMatriculas(){
+    console.log("vai listar as matriculas");
+    var esp = "</span>&nbsp - &nbsp<span>";
+    var html = " ";
+    for(var i = 0; i < matriculas.length; i++){
+        html += "<div class='opt-combo' onclick='defineMatricula("+matriculas[i].id+","+matriculas[i].matricula+");'><span>"+
+        matriculas[i].matricula+esp+matriculas[i].orgao+esp+matriculas[i].cargo+esp+matriculas[i].tipo+"</span></div><hr>";
+    }
+    console.log(html);
+    $(".lista-matriculas").html(html);
 }
