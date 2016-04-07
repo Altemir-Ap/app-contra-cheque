@@ -147,3 +147,54 @@ function listaMatriculas(){
     console.log(html);
     $(".lista-matriculas").html(html);
 }
+
+function exibeContracheque(){
+    var html = "<div class='table-details'>";
+    anoMes = contracheque.data.ano;
+    cpf = contracheque.data.cpf;
+    pisPasep = contracheque.data.pis;
+    nome = contracheque.data.nome;
+    cargo = contracheque.data.cargo;
+    orgao = contracheque.data.orgao;
+    classePadrao = contracheque.data.classe;
+    banco = contracheque.data.banco;
+    agencia = contracheque.data.agencia;
+    conta = contracheque.data.conta;
+    previdencia = contracheque.data.previdencia;
+    baseCauculo = contracheque.data.baseCalculoIR;
+    proventos = contracheque.data.proventos;
+    descontos = contracheque.data.descontos;
+    liquido = contracheque.data.liquido;
+    
+    $("#ano-mes").html(anoMes);
+    $("#cpf").html(cpf);
+    $("#pis-pasep").html(pisPasep);
+    $("#matricula").html(matricula);
+    $("#nome").html(nome);
+    $("#cargo").html(cargo);
+    $("#orgao").html(orgao);
+    $("#classe-padrao").html(classePadrao);
+    $("#banco").html(banco);
+    $("#agencia").html(agencia);
+    $("#conta").html(conta);
+    $("#previdencia").html(previdencia);
+    $("#base-calculo").html(baseCauculo);
+    $("#proventos").html(proventos);
+    $("#descontos").html(descontos);
+    $("#liquido").html(liquido);
+    
+    console.log(contracheque.data.details[0].descricao);
+    
+    for(var i = 0; i < contracheque.data.details.length; i++){
+        html += "<span class='label'>Rubrica:&nbsp</span><span>"+
+        contracheque.data.details[i].rubrica+"</span><br /><span class='label'>Seq:&nbsp</span><span>"+
+        contracheque.data.details[i].seq+"</span><br /><span class='label'>Descrição:&nbsp</span><span>"+
+        contracheque.data.details[i].descricao+"</span><br /><span class='label'>Valor R$:&nbsp</span><span>"+
+        contracheque.data.details[i].valor+"</span><br /><span class='label'>Prazo:&nbsp</span><span>"+
+        contracheque.data.details[i].prazo+"</span><br /><span class='label'>Parm:&nbsp</span><span>"+
+        contracheque.data.details[i].parm+"</span><br /><span class='label'>Qtd:&nbsp</span><span>"+
+        contracheque.data.details[i].qtd+"</span></div>";
+    }
+    
+    $(".bloco-tabela").html(html);
+}
